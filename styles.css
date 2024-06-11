@@ -1,0 +1,27 @@
+:root{--color-primary:#262A2F;--color-accent:#F53;--color-grey:#868686;--color-white:#FFF;--grid-column-width:100px;--grid-gap:20px}
+*{all:unset;display:revert}
+body{color:var(--color-primary);font-size:22px;font-weight:400;font-family:'Roboto',sans-serif;background-color:#ebebeb}
+.grid{display:grid;grid-template-columns:repeat(12,var(--grid-column-width));gap:var(--grid-gap)}
+.container{max-width:1400px;margin:0 auto}
+.header{padding:40px 0}
+.logo{grid-column:span 4;padding-right:30px}
+.logo img{display:block}
+.menu{display:flex;grid-column:5/-1;list-style:none}
+.menu > li{margin-right:60px}
+.menu > li:last-child{margin-right:0}
+.menu > li > a{color:var(--color-primary);font-size:24px;font-weight:700;text-transform:uppercase}
+.menu > li > a:hover{cursor:pointer;color:var(--color-accent)}
+.articles{grid-column:span 9}
+.article{display:grid;grid-template-columns:repeat(9,var(--grid-column-width));gap:var(--grid-gap);margin:0 0 25px}
+.article-image{grid-column:span 3;position:relative;overflow:hidden;max-height:380px;min-height:190px}
+.article-image > img{display:block;width:100%;height:100%;object-fit:cover}
+.article-content{grid-column:4/-1;padding-right:60px}
+.article-category{display:inline-block;color:var(--color-accent);font-size:14px;font-weight:700;line-height:20px;text-transform:uppercase;margin:0 0 10px}
+.article-date{color:var(--color-accent);font-size:20px;font-weight:400;line-height:20px;text-transform:uppercase}
+.article-content > h2{display:block;height:120px;color:var(--color-primary);font-size:42px;font-weight:700;line-height:40px}
+.article-text{display:block;color:var(--color-primary);font-size:20px;font-weight:400;line-height:20px;margin:35px 0}
+.article-source{display:inline-block;color:var(--color-grey);font-size:20px;font-weight:300;line-height:20px;text-transform:uppercase}
+.aside{grid-column:10 / -1}
+.articles-list{margin:0 0 15px;padding-left:10px;border-left:10px solid var(--color-primary)}
+.articles-list > h2{color:var(--color-primary);font-size:14px;font-weight:700;line-height:20px;margin:0 0 15px}
+.articles-list-date{display:block;color:var(--color-accent);font-size:14px;font-weight:700;line-height:15px}
