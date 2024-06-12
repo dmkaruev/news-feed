@@ -1,33 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="//fonts.googleapis.com" />
-    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin />
-    <title>Title</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" />
-    <link rel="stylesheet" href="styles.css" />
-</head>
+<?php
+require_once 'head.php';
+?>
 <body>
-<header class="header">
-    <div class="container">
-        <nav class="header_top grid">
-            <a href="#" class="logo">
-                <img src="images/logo.png" alt="" title="" />
-            </a>
-            <ul class="menu">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Мода</a></li>
-                <li><a href="#">Технологии</a></li>
-                <li><a href="#">Музыка</a></li>
-                <li><a href="#">Видео</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<?php
+require_once 'header.php';
+?>
 <main class="main">
     <div class="container grid">
         <section class="articles">
@@ -70,8 +49,8 @@
         </aside>
     </div>
 </main>
-<footer class="footer"></footer>
-<h1>Заголовок</h1>
-<p>Тестовое описание какого-то текста на этой неделе я тут пишут.</p>
+<?php
+require_once 'footer.php';
+?>
 </body>
 </html>
