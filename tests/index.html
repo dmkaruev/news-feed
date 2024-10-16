@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script crossorigin src="//unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="//unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="//unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        *{
+            margin: 10px;
+            padding: 10px}
+    </style>
 </head>
 <body>
-    <script src="1.js"></script>
+<div id="root"></div>
+<script type="text/babel" data-presets="env,react">
+    let counter = 0;
+
+    const Button = ({ text, nameClass, iconSrc, ...restProps }) => {
+        return(
+            <button {...restProps} className={nameClass}>
+                {iconSrc !== undefined && <img src={iconSrc} alt="" />}
+                {text}
+            </button>
+        );
+    }
+
+    ReactDOM.render(
+        <div className="Counter">
+            <Button tabIndex={2} nameClass="Counter-Increment" text="Increment" />
+            <Button tabIndex={1} nameClass="Counter-Reset" text="Reset" iconSrc="2" />
+            {counter}
+        </div>
+    , document.getElementById('root'));
+</script>
 </body>
 </html>
