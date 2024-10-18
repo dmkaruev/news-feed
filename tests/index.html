@@ -15,8 +15,6 @@
 <body>
 <div id="root"></div>
 <script type="text/babel" data-presets="env,react">
-    let counter = 0;
-
     const Button = ({ text, nameClass, iconSrc, ...restProps }) => {
         return(
             <button {...restProps} className={nameClass}>
@@ -26,13 +24,20 @@
         );
     }
 
-    ReactDOM.render(
-        <div className="Counter">
-            <Button tabIndex={2} nameClass="Counter-Increment" text="Increment" />
-            <Button tabIndex={1} nameClass="Counter-Reset" text="Reset" iconSrc="2" />
-            {counter}
-        </div>
-    , document.getElementById('root'));
+    const Counter = () => {
+        const [counter, setCounter] = React.useState(0);
+
+        return (
+            <div className="Counter">
+                <Button disabled={counter >= 10} onClick={() => {setCounter(counter + 1)}} nameClass="Counter-Increment" text="Increment" />
+                <Button disabled={counter === 0} onClick={() => {setCounter(0)}} nameClass="Counter-Reset" text="Reset" />
+                {counter}
+            </div>
+        );
+    }
+
+
+    ReactDOM.render(<Counter />, document.getElementById('root'));
 </script>
 </body>
 </html>
