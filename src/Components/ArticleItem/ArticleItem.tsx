@@ -20,9 +20,7 @@ export const ArticleItem: FC = () => {
             .then(setArticleItem);
 
         Promise.all([
-            fetch(`https://frontend.karpovcourses.net/api/v2/ru/news/`).then((response) =>
-                response.json()
-            ),
+            fetch(`https://frontend.karpovcourses.net/api/v2/ru/news/`).then((response) => response.json()),
             fetch('https://frontend.karpovcourses.net/api/v2/sources').then((response) => response.json()),
             fetch('https://frontend.karpovcourses.net/api/v2/categories').then((response) => response.json()),
         ]).then((responses) => {

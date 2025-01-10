@@ -19,12 +19,7 @@ export const Page: FC = ({ children }) => {
                     <div className="footer__bottom">
                         <p className="footer__text">
                             Сделано в{' '}
-                            <a
-                                className="footer__link"
-                                href="https://vk.com"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
+                            <a className="footer__link" href="https://vk.com" target="_blank" rel="noreferrer">
                                 vk.com
                             </a>
                         </p>

@@ -51,7 +51,7 @@ body {
     color: var(--color-accent);
 }
 
-.article-date+.article-source::before {
+.article-date + .article-source::before {
     content: " · ";
 }
 
